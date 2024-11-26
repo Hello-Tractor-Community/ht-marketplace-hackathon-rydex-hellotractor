@@ -14,7 +14,10 @@ const app = express();
 const server = createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: ["https://localhost:5173"],
+    origin: [
+      "https://localhost:5173",
+      "https://ht-marketplace-hackathon-rydex-hellotractor-ft5xfdlua.vercel.app/",
+    ],
     credentials: true,
   },
 });
@@ -22,7 +25,10 @@ export const io = new Server(server, {
 // Middleware
 app.use(
   cors({
-    origin: ["https://localhost:5173"],
+    origin: [
+      "https://localhost:5173",
+      "https://ht-marketplace-hackathon-rydex-hellotractor-ft5xfdlua.vercel.app/",
+    ],
     credentials: true,
   })
 );
