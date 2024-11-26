@@ -8,6 +8,7 @@ import AuthProvider from "./AuthContext";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import MapProvider from "./MapContext";
+import MiscProvider from "./MiscContext";
 
 type Props = {
   children: React.ReactNode;
@@ -22,11 +23,13 @@ const MasterProvider: FC<Props> = ({ children, settings }) => {
         <AuthProvider>
           <NavProvider>
             <MapProvider>
-              <ThemeComponent>
-                {children}
-                <CoolSnackbar />
-                <ConfirmDialog />
-              </ThemeComponent>
+              <MiscProvider>
+                <ThemeComponent>
+                  {children}
+                  <CoolSnackbar />
+                  <ConfirmDialog />
+                </ThemeComponent>
+              </MiscProvider>
             </MapProvider>
           </NavProvider>
         </AuthProvider>

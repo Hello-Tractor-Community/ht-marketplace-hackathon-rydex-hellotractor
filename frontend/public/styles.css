@@ -1,0 +1,156 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333333;
+}
+
+/* Container */
+.email-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.email-header {
+  background-color: #ff6537;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Main Content */
+.email-content {
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #ff6537;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content-block {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #ff6537;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff6537;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e55426;
+}
+
+.updates-list {
+  list-style-position: inside;
+  margin-left: 20px;
+}
+
+.updates-list li {
+  margin-bottom: 10px;
+  color: #555555;
+}
+
+/* Footer */
+.email-footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eeeeee;
+}
+
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-link {
+  color: #ff6537;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ff6537;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .email-container {
+    margin: 10px;
+    border-radius: 0;
+  }
+
+  .email-content {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

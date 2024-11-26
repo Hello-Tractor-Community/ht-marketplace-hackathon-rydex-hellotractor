@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import router from "./routes";
@@ -7,8 +9,10 @@ import { UserTokenPayload } from "./models/User";
 import firebaseApp from "./utils/firebase";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import validateUser, { validateUserSocket } from "./middleware/validateUser";
+import { validateUserSocket } from "./middleware/validateUser";
 import handlers from "./handlers";
+
+import transporter from "./utils/sendEmail";
 
 const app = express();
 const server = createServer(app);
@@ -71,6 +75,13 @@ server.listen(PORT, async () => {
     firebaseApp;
 
     console.log(`Server is running on port ${PORT}`);
+
+    try {
+      // Send a test email on server startup
+      await transporter.verify();
+    } catch (error) {
+      console.log("Error connecting to email server", error);
+    }
   } catch (error) {
     console.log(error);
     process.exit(1);

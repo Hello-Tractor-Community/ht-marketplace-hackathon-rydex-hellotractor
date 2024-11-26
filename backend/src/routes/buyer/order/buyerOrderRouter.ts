@@ -6,6 +6,11 @@ import { extendedParser } from "../../../utils/queryParser";
 import { ProductReview } from "../../../models/ProductReview";
 import Product from "../../../models/Product";
 import { Order } from "../../../models/Order";
+import nodemailer from "nodemailer";
+import fs from "fs";
+import path from "path";
+import { Store } from "../../../models/Store";
+import { sendEmail } from "../../../utils/sendEmail";
 
 const parser: any = require("@bitovi/sequelize-querystring-parser");
 
@@ -188,6 +193,44 @@ buyerOrderRouter.post("/:orderId/review", async (req: Request, res, next) => {
     });
 
     res.status(201).json(review);
+  } catch (error) {
+    next(error);
+  }
+});
+
+buyerOrderRouter.post("/serviceRequest", async (req: Request, res, next) => {
+  try {
+    const { message, serviceType, serviceDescription, storeId } = req.body;
+
+    const store = await Store.findByPk(storeId);
+    if (!store) {
+      throw new ApiError(404, "Store not found");
+    }
+
+    // Load the email template
+    const templatePath = path.join(
+      __dirname,
+      "../../../templates/serviceRequest.html"
+    );
+    let emailTemplate = fs.readFileSync(templatePath, "utf8");
+
+    // Replace placeholders in the template with actual values
+    emailTemplate = emailTemplate.replace("{{message}}", message);
+    emailTemplate = emailTemplate.replace("{{serviceType}}", serviceType);
+    emailTemplate = emailTemplate.replace(
+      "{{serviceDescription}}",
+      serviceDescription
+    );
+
+    await sendEmail({
+      to: store.email,
+      subject: "Service Request",
+      html: emailTemplate,
+    });
+
+    res
+      .status(200)
+      .json({ message: "Service request email sent successfully" });
   } catch (error) {
     next(error);
   }

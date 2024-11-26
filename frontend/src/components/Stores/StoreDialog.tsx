@@ -9,7 +9,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Dispatch, FC, SetStateAction, useState } from "react";
+import { Dispatch, FC, SetStateAction, useContext, useState } from "react";
 
 import { createStore, createStoreSchema } from "../../api/stores/createStore";
 import { toast } from "../../utils/toast";
@@ -17,6 +17,7 @@ import { Form } from "@rjsf/mui";
 import validator from "@rjsf/validator-ajv8";
 import widgets from "../Widgets";
 import { Store } from "../../api/stores/getStores";
+import { MiscContext } from "../../context/MiscContext";
 
 type Props = {
   open: boolean;
@@ -32,6 +33,7 @@ const CreateStoreDialog: FC<Props> = ({
 }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [uploading, setUploading] = useState(false);
+  const { regions, dealerTypes } = useContext(MiscContext);
 
   const handleSubmit = async (data: object) => {
     setUploading(true);
@@ -109,13 +111,21 @@ const CreateStoreDialog: FC<Props> = ({
               </Stack>
             ) : (
               <Form
-                schema={createStoreSchema}
+                schema={createStoreSchema(dealerTypes, regions)}
                 //   uiSchema={{
                 //     "ui:submitButtonOptions": {
                 //       submitText: "Next",
                 //     },
                 //     ...uiSchema,
                 //   }}
+                uiSchema={{
+                  location: {
+                    "ui:field": "PlacesTextField",
+                  },
+                  logo: {
+                    "ui:field": "FileUploadTextField",
+                  },
+                }}
                 validator={validator}
                 onSubmit={(data) => {
                   console.log("create store dialog form submitted", data);

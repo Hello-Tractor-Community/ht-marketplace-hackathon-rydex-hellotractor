@@ -68,7 +68,7 @@ v2:
             ☐ Returns and refunds
         
         Chat:
-            ☐ Initiate chat with buyer as a seller, prefarrably from the orderpage
+            ✔ Initiate chat with buyer as a seller, prefarrably from the orderpage @done(24-11-26 20:35)
     
     Buyer:
         ☐ Product rating and customer follow up. If a seller marks an object as bought by a buyer the buyer should be given a chance to rate and comment. send email asking for feedback

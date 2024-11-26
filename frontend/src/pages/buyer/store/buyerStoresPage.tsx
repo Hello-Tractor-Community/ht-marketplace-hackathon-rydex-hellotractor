@@ -20,12 +20,7 @@ import {
   CardActionArea,
 } from "@mui/material";
 import { Search, MapPin, Star } from "lucide-react";
-import {
-  getDealerTypes,
-  getRegions,
-  getStores,
-  Store,
-} from "../../../api/stores/getStores";
+import { getStores, Store } from "../../../api/stores/getStores";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Shop } from "@mui/icons-material";
 import GoogleMap from "../../../components/Map/map";
@@ -33,11 +28,11 @@ import { MapContext } from "../../../context/MapContext";
 import { v4 } from "uuid";
 import { createRoot } from "react-dom/client";
 import { useTheme } from "@emotion/react";
+import { MiscContext } from "../../../context/MiscContext";
 
 export default function BuyerStoresPage() {
   const [stores, setStores] = useState<Store[]>([]);
-  const [regions, setRegions] = useState<string[]>([]);
-  const [dealerTypes, setDealerTypes] = useState<string[]>([]);
+
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
   const [dealerType, setDealerType] = useState("");
@@ -46,10 +41,7 @@ export default function BuyerStoresPage() {
   );
   const [searchParams, setSearchParams] = useSearchParams();
 
-  useEffect(() => {
-    getRegions().then(setRegions).catch(console.error);
-    getDealerTypes().then(setDealerTypes).catch(console.error);
-  }, []);
+  const { dealerTypes, regions } = useContext(MiscContext);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,5 +1,5 @@
 import { Typography, Box, Container, Button, Stack } from "@mui/material";
-import hero from "../../assets/images/hero2.jpg";
+import hero from "../../assets/images/tractor.jpg";
 import Categories from "../../components/LandingPage/featuredCategories";
 import Dealers from "../../components/LandingPage/dealers";
 import Products from "../../components/LandingPage/products";

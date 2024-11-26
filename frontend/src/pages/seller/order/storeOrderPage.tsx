@@ -23,6 +23,7 @@ import UpdateOrderProductDialog from "../../../components/Orders/updateOrderProd
 import dayjs from "dayjs";
 import { createStockRecord } from "../../../api/product/createStockRecord";
 import { toast } from "../../../utils/toast";
+import ContactBuyerDialog from "../../../components/Chat/ContactBuyerDialog";
 
 const StoreOrderPage: FC = () => {
   const [order, setOrder] = useState<Order>();
@@ -32,6 +33,7 @@ const StoreOrderPage: FC = () => {
   const [updateOrderProductOpen, setUpdateOrderProductOpen] = useState(false);
   const [selectedRecord, setSelectedRecord] = useState<OrderProduct>();
   const [updateStockLoaing, setUpdateStockLoading] = useState(false);
+  const [contactBuyerOpen, setContactBuyerOpen] = useState(false);
 
   const { id, orderId } = useParams();
 
@@ -138,6 +140,14 @@ const StoreOrderPage: FC = () => {
                   >
                     Update Order Status
                   </Button>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{ width: "fit-content" }}
+                    onClick={() => setContactBuyerOpen(true)}
+                  >
+                    Chat with Buyer
+                  </Button>
                 </Stack>
               </CardContent>
             </Card>
@@ -216,6 +226,13 @@ const StoreOrderPage: FC = () => {
           </Box>
         </CardContent>
       </Card>
+      {order?.buyer?.user?.id && (
+        <ContactBuyerDialog
+          open={contactBuyerOpen}
+          setOpen={setContactBuyerOpen}
+          buyerId={order?.buyer?.user?.id}
+        />
+      )}
       <UpdateOrderProductDialog
         open={updateOrderProductOpen}
         setOpen={setUpdateOrderProductOpen}
