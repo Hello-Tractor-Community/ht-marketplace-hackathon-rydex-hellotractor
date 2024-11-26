@@ -16,7 +16,7 @@ export const io = new Server(server, {
   cors: {
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://ht-marketplace-hackathon-rydex-hellotractor.vercel.app/"
+        ? "https://ht-marketplace-hackathon-rydex-hellotractor.vercel.app"
         : "https://localhost:5173",
     credentials: true,
   },
@@ -27,7 +27,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://ht-marketplace-hackathon-rydex-hellotractor.vercel.app/"
+        ? "https://ht-marketplace-hackathon-rydex-hellotractor.vercel.app"
         : "https://localhost:5173",
     credentials: true,
   })
