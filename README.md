@@ -46,7 +46,7 @@ Please organize and complete the following deliverables within this repository:
 ### 3. **Live Application URL**
 
 - Deploy your application to a platform like Vercel, Netlify, or AWS.
-- **Link to Live App**: https://ht-marketplace-hackathon-rydex-hellotractor-65baifsb7.vercel.app/
+- **Link to Live App**: https://ht-marketplace-hackathon-rydex-hellotractor.vercel.app/
 
 ### 4. **Technical Documentation**
 
