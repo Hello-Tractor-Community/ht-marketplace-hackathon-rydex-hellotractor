@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["make", "model", "hoursUsed"],
+  "properties": {
+    "make": { "type": "string", "title": "Make" },
+    "model": { "type": "string", "title": "Model" },
+    "hoursUsed": { "type": "number", "title": "Hours Used" }
+  }
+}

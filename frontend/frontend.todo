@@ -1,0 +1,160 @@
+v1:
+    Seller:
+        ✔ login @done(24-11-18 22:00)
+        ✔ Logout @done(24-11-20 23:12)
+        ✔ configure router @done(24-11-19 11:17)
+        ✔ register @done(24-11-19 11:17)
+        ✔ Create store @done(24-11-19 11:18)
+        ✔ Open store @done(24-11-19 11:40)
+        ✔ Eliminate the top level dashboard, then after logging in, select the store to open @done(24-11-19 21:03)
+        ✔ View products @done(24-11-19 21:04)
+        ✔ Create a product @done(24-11-19 22:09)
+        ✔ Edit a product @done(24-11-19 22:09)
+        
+        Orders:
+            ✔ View orders @done(24-11-21 10:17)
+            ✔ View a single order and its products @done(24-11-21 10:46)
+            ✔ Update orders @done(24-11-21 12:15)
+
+        ✔ Create a page to view a product, its impressions , and stock etc @done(24-11-21 22:38)
+        ✔ Dashboard data @done(24-11-22 11:05)
+    
+    Buyer:
+        ✔ Homepage @done(24-11-20 15:26)
+        ✔ Seach products @done(24-11-23 00:00)
+        ✔ View product listing @done(24-11-20 15:26)
+        ✔ create account @done(24-11-20 21:43)
+        ✔ Login @done(24-11-20 21:38)
+        ✔ logout @done(24-11-20 21:38)
+        ✔ place order @done(24-11-21 00:20)
+
+        Product page:
+            ✔ Show button to place order, or chat with seller @done(24-11-21 00:20)
+    
+v2:
+    Seller:
+        Chat: 
+            ✔ Create a chat page Then create one as well for the buyer @done(24-11-24 02:34)
+            
+        ✔ Fix seller is showing buyer portal @done(24-11-24 01:01)
+        ✔ Edit store @done(24-11-24 15:27)
+        ✔ Switch between stores @done(24-11-24 15:44)
+        ✔ Create seller registration logic @done(24-11-24 15:56)
+
+        Products:
+            ✔ Create a ui to upload product specs @done(24-11-24 17:33)
+
+        Order:
+            ✔ Set the order prices @done(24-11-24 19:06)
+            ✔ Update the inventory records from the order page @done(24-11-24 19:14)
+
+    Buyer:
+
+        Cart:
+            ✔ Create a cart to store multiple products then do a bulk inquiry to all respective sellers @done(24-11-25 01:11)
+            ✔ Create a thank you page @done(24-11-25 01:46)
+
+        Orders page:
+            ✔ Show all orders and their status @done(24-11-25 02:30)
+            ✔ Cancel order @done(24-11-25 02:30)
+
+        ✔ Create a footer element @done(24-11-25 08:39)
+        Home page:
+            ✔ Fill in the categories, products and offers and the rest of the empty sections @done(24-11-25 08:39)
+            ✔ In the header, add buttons to go to seller page and go to search page @done(24-11-25 08:12)
+
+        Shop page:
+            ✔ Search with category autocomplete @done(24-11-22 15:30)
+            ✔ Search with product autocomplete @done(24-11-22 15:30)
+            ☐ Sort with date, price, rating
+            ✔ Filter dialog @done(24-11-25 16:49)
+            ☐ Handle category not found
+            
+        Product page:
+            ✔ Show specifications @done(24-11-25 01:39)
+            ☐ Show map, history in the product page
+            ✔ Show the correct breadcrumbs @done(24-11-25 01:40)
+            ☐ Show recommendations
+            ✔ Fix the white bg should take up the whole page @done(24-11-25 01:40)
+            ✔ After place order, show the customer the next steps and a place to view order or chat with seller @done(24-11-25 02:34)
+            ✔ Show reviews and ratings @done(24-11-26 01:28)
+            ✔ Add reviews and ratings @done(24-11-26 01:28)
+
+    Seller:
+        Chat:
+            ☐ Add a way to start a char with a user from the orders page.
+
+    
+    Buyer:
+        Chat:
+            ✔ Make the main container to be full screen @done(24-11-25 16:50)
+
+        Dealers:
+            ✔ Search dealers (name, location, category) @done(24-11-26 00:47)
+            ✔ Create a dealer page @done(24-11-26 00:47)
+            ✔ Show the dealer's details @done(24-11-26 00:47)
+            ☐ Show the dealer's products
+            ☐ Show the dealer's reviews
+            ✔ Show dealer location on map @done(24-11-26 00:47)
+        
+      
+
+        HomePage:
+            ☐ Filter by location -> city
+
+        Wishlist:
+            ☐ Create a wishlist page
+            ☐ Add to wishlist button in the product page
+            ☐ Remove from wishlist button in the product page
+
+        ☐ Seed the Db with all makes and all models in the subcategory tables
+
+    ✔ Load categories, stores, products from the db in the landing page @done(24-11-26 07:37)
+    ✔ Make the app bar to be responsive @done(24-11-26 07:37)
+    ✔ Add a badge for the item condition in the ecommerce layout page @done(24-11-26 02:15)
+    ✔ Add an icon for location in the ecommerce layout page @done(24-11-26 02:15)
+    ✔ Add an icon to open chat for the buyer on the app bar @done(24-11-26 07:37)
+    ☐ check all pages for responsiveness
+    ☐ Login with facebook
+    ☐ Login with google
+
+    Admin:
+        ✔ Send email when a new admin is created @done(24-11-26 09:10)
+        ✔ get all products @done(24-11-26 09:11)
+        ✔ get all stores d@done(24-11-26 09:10)
+        ✔ approve products @done(24-11-26 09:10)
+        ✔ get all orders @done(24-11-26 09:11)
+
+    ☐ create autocomplete for places
+    ✔ swap the login bg @done(24-11-26 09:16)
+    ☐ Change favicon
+    
+
+v3:
+    ☐ Fix the API client autologout interceptor
+    ☐ Create the automatic pagination on the cooltable, idea - pass the data loading function as a prop to the cooltable, then the cooltable will call the function with the page number and the page size
+    ☐ Make all order statuses be represented by a badge/chip
+    ☐ Separate the login button in the side nav to show in the bottom along with the user details.
+
+    
+    Buyer:
+        Dealer/Technician:
+            ☐ Opt in for dealer notifications
+
+    Seller:
+        Dashboard:
+            ☐ Add a table showing the orders made in the period selected
+            ☐ Create a row in the dashboard layout that will show the bread crumbs?, notifications, settings and a link to the store on buyer's page
+
+        Products:
+            ☐ Add search to the products page
+
+        Order page:
+            ☐ Make the order products be shown using cards with the product image, name, price and quantity
+            ☐ Place order on behalf of a buyer (this is for when a buyer calls in to place an order)
+        
+        Chat:
+            ☐ Show the number of unread messages in the chat icon in the side nav - when getting me endpoint, get the chat users and the chats then do mafs
+            ☐ Implement lazy loading of the chat messages
+
+        

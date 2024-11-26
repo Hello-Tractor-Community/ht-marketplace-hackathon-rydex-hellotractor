@@ -1,0 +1,14 @@
+chat: id, head, logo?, title? , type- group,single
+    chat message: 
+        id, sender, chatid, message, attachments
+    chat user:
+        id, chatid
+
+    //default scope, include users, get the head
+    //virtual column? subject -> user 0 - name
+    //virtual column image -> user 0 image
+    //virtual column lastmessage -> from the head
+
+
+// first message
+- create a chat, chat users, chat message in an endpoint 

@@ -1,0 +1,98 @@
+v1:
+    Sellers: 
+        ✔ login @done(24-11-18 15:17)
+        ✔ logout @done(24-11-20 23:01)
+        ✔ register @done(24-11-18 15:17)
+        store management:
+            ✔ list stores @done(24-11-18 15:15)
+            ✔ create store @done(24-11-18 15:15)
+            ✔ edit store @done(24-11-18 15:15)
+        Product management:
+            ✔ Upload a product @done(24-11-18 15:14)
+            ✔ get all products @done(24-11-18 15:14)
+            ✔ File upload @done(24-11-19 11:17)
+            ✔ Edit a product @done(24-11-19 21:03)
+            ✔ Delete products @done(24-11-19 22:23)
+            ✔ Create a views column that will be updated every time the listing is viewed - GET all @done(24-11-19 22:37)
+            ✔ Create a clicks column that will be updated every time the listing is clicked - GET specific @done(24-11-19 22:37)
+            
+            Inventory management:
+                ✔ create inventory record @done(24-11-21 14:32)
+                        
+        Orders:
+            ✔ Get all orders @done(24-11-21 09:09)
+            ✔ Update order status @done(24-11-21 09:54)
+            ✔ Delete order @done(24-11-21 09:55)
+
+        Dashboard:
+            ✔ load views, clicks, orders per day @done(24-11-23 00:02)
+              
+    Buyer:
+        Orders:
+            ✔ create order @done(24-11-20 22:36)
+            ✔ cancel order @done(24-11-20 23:00)
+
+v2:
+    Chat:
+        ✔ All users should be able to chat with one another @done(24-11-24 00:32)
+        ✔ Emit a chat created event when a chat is created and the other user is online. @done(24-11-24 00:32)
+
+    Email:
+        ☐ Send an email to the seller when a buyer places an order
+        ☐ Send an email to the buyer when the seller updates the order status
+        ☐ Send an email when a chat is created and a message is sent but the client is offline
+
+    Reviews:
+        ✔ Create a review table @done(24-11-26 01:57)
+        ✔ Add a review to a product @done(24-11-26 01:57)
+        ✔ Get all reviews for a product @done(24-11-26 01:57)
+        ✔ Get all reviews for a store @done(24-11-26 01:57)
+        ☐ Send email to the seller when a review is added to their product
+        ☐ Send email when the seller replies to a review
+
+    Seller: 
+        ✔ create /seller/store endoint to get my stores @done(24-11-24 00:47)
+
+        Dealers:
+            ✔ Create a type on the store table to indicate if the store is a dealer/technician/store @done(24-11-25 23:28)
+            ✔ Save dealer details in the data json column @done(24-11-25 23:28)
+
+        Products:
+            ☐ Shipping options
+            ☐ Verified and unverified products
+            ☐ Sponsored products?
+
+        Order:
+            ✔ Update order items @done(24-11-24 18:23)
+            ✔ Add the orderProductId to the productinventory table, will be used to determine if the stock can be updated @done(24-11-26 01:59)
+            ☐ Returns and refunds
+        
+        Chat:
+            ☐ Initiate chat with buyer as a seller, prefarrably from the orderpage
+    
+    Buyer:
+        ☐ Product rating and customer follow up. If a seller marks an object as bought by a buyer the buyer should be given a chance to rate and comment. send email asking for feedback
+        ☐ Create a views table with product id, buyer id, clicks count, view count. to be used to analyze buyers prefs
+        ☐ Add a hook to update product views and clicks
+        ☐ Load views, clicks, orders per day on the seller dashboard
+        ☐ Send service request to a dealer (this should be an email to the dealer)
+
+v3: 
+    Order:
+        ☐ Add order product to an existing order
+
+    Inventory:
+        ☐ Add a column to the productinventory table to store the stock count at the time of creation
+    Chat:
+        ✔ when creating a chat, check if a chat already exists between the two users, then return the existing chat object with a new message @done(24-11-24 01:35)
+
+
+v5: 
+    ☐ Create the hook to update the messages read in the chat for a chatuser model instead of assuming the user read all messages
+
+    ProductInventory:
+        ☐ update inventory record
+        ☐ delete inventory record
+
+    Buyer:
+        ☐ Enforce that when a buyer is placing an order, all products in the order should be from the same store
