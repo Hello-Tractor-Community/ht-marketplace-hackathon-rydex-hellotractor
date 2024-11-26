@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import PageContainer from "../../../components/PageContainer/PageContainer";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { getStore, Store } from "../../../api/stores/getStores";
 import { useParams } from "react-router-dom";
 import { Form } from "@rjsf/mui";
@@ -17,11 +17,13 @@ import {
 } from "../../../api/stores/createStore";
 import validator from "@rjsf/validator-ajv8";
 import widgets from "../../../components/Widgets";
+import { MiscContext } from "../../../context/MiscContext";
 
 const StoreSettingsPage = () => {
   const [store, setStore] = useState<Store>();
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
+  const { dealerTypes, regions } = useContext(MiscContext);
 
   useEffect(() => {
     if (id) {
@@ -78,7 +80,7 @@ const StoreSettingsPage = () => {
             <Fade in>
               <Stack>
                 <Form
-                  schema={createStoreSchema}
+                  schema={createStoreSchema(dealerTypes, regions)}
                   // uiSchema={{
                   //   "ui:submitButtonOptions": {
                   //     submitText: "Next",

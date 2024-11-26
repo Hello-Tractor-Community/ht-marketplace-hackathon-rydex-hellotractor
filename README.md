@@ -41,7 +41,7 @@ Please organize and complete the following deliverables within this repository:
 ### 2. **Demo Video**
 
 - Upload your video to YouTube, Vimeo, or as an mp4 file.
-- **Link to Demo Video**: [Insert your video link here]
+- **Link to Demo Video**: https://drive.google.com/drive/folders/1kjRfZsyfHO1htz3Uq_e5GynPrPTZxlQp?usp=sharing
 
 ### 3. **Live Application URL**
 
